@@ -1,0 +1,16 @@
+﻿#post {
+    position: static;
+    color: aquamarine;
+    font-family: 'Comic Sans MS';
+    font-size: large;
+    margin-top: 100px;
+}
+#box1{
+    color:orange;
+    background-color:black;
+}
+#comments {
+    
+     position: relative;
+     color:antiquewhite;
+}

@@ -1,0 +1,23 @@
+﻿.jumbotron{
+    font-family:'MS Gothic';
+    color:aqua;
+    font-size:large;
+}
+#ItemList{
+    font-family:'Comic Sans MS';
+    font-size:x-large;
+    list-style-type:disc;
+    
+}
+#ItemList:hover{
+    font-family:Webdings;
+    
+}
+ #list{
+    height:200px;
+        width:100%;
+}
+ #list{
+    overflow:hidden; 
+       overflow-y:scroll;
+}

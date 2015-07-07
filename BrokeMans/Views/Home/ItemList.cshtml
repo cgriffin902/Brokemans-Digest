@@ -1,0 +1,19 @@
+﻿@model BrokeMans.Models.ItemListViewModel
+@Styles.Render("~/CSS/ItemListStyle.css")
+
+<div class="jumbotron">
+    <h1>ITEM LIST</h1>
+</div>
+<div class="panel panel-info">
+    
+        <ul  id="list">
+
+            @foreach (var i in @Model.ItemList)
+            {
+                <li id="ItemList">
+                    @Html.ActionLink(i.Title, "Index", "Item", new { i.Id }, null)
+                </li>
+            }
+        </ul>
+    
+</div>

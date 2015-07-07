@@ -1,0 +1,28 @@
+﻿@model BrokeMans.Models.CommentViewModel
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Comment</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserComment)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.UserComment)
+            @Html.ValidationMessageFor(model => model.UserComment)
+        </div>
+        
+        <p>
+            <input type="submit" value="CommentPage" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "ItemList", "Home")
+</div>
+

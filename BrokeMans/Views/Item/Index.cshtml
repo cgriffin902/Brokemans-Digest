@@ -1,0 +1,24 @@
+﻿@model BrokeMans.Models.ItemViewModel
+@Styles.Render("~/CSS/DetailsStyle.css");
+<div id="post">
+    <h3>@Model.Title</h3><br />
+    <img src="@Model.Pic" />
+    <h2> Brought to you by: @Model.UserName</h2><br />
+   <div id="box1" class="col-lg-4">
+     <p>@Model.Description</p>
+      <br />
+   </div>
+</div>
+<div id="comments">
+    @foreach (var i in Model.commentViewModel)
+    {
+        @i.UserComment
+        @i.TimeStamp
+        @i.Commenter
+    }
+</div>
+
+@Html.ActionLink("Add Comment", "CommentPage", "Comments", new { id = Model.Id }, null)
+@Html.ActionLink("Edit", "Edit", "Item", new { id = @Model.Id }, null)
+@Html.ActionLink("Back to List", "ItemList", "Home")
+@Html.ActionLink("Delete", "Delete", "Item", new { id = @Model.Id }, null)
